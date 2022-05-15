@@ -1,7 +1,5 @@
 #!name= 复写规则
-#!desc= LimeAroma自用复写规则
-#!author= Lime
-#!homepage= https://github.com/LimeArom
+#!desc= 自用复写规则
 
 [Rewrite]
 #游戏时光
