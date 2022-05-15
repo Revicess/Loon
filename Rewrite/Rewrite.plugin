@@ -1,7 +1,3 @@
-#!name= 复写规则
-#!desc= 自用复写规则
-
-[Rewrite]
 #游戏时光
 ^http:\/\/app02\.vgtime\.com:8080\/vgtime-app\/api\/v2\/init\/ad\.json$ reject
 close_ad=false header close_ad=true
