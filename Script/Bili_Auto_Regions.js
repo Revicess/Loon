@@ -1,4 +1,4 @@
-#旧版本：2022.01.26
+#旧版本：2022.05.16
 [Script]
 http-response ^https:\/\/ap(p|i)\.bili(bili|api)\.(com|net)\/(pgc\/view\/v\d\/app\/season|x\/v\d\/search\/defaultwords)\?access_key script-path=https://raw.githubusercontent.com/NobyDa/Script/6924ce91efa0e8dee956ca1b7fdb5fa9d74dbfd3/Surge/JS/Bili_Auto_Regions.js, requires-body=true, tag=bili自动地区
 
