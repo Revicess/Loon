@@ -8,7 +8,7 @@
 close_ad=false header close_ad=true
 
 #dmm
-https?:\/\/.*\.dmm\.co\.jp header-replace Accept-Language ja-JP;q=0.9,zh-CN,zh-Hans;q=0.5
+https?:\/\/.*\.dmm\.co\.jp header-replace Accept-Language ja-JP;q=0.9,en-US;q=0.5,zh-CN,zh-Hans;q=0.2
 
 [MITM]
 hostname = *.dmm.co.jp,m.baidu.com
