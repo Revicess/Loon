@@ -1,3 +1,4 @@
+#!name=酷安去广告
 /*
 version     v0.0.1
 updatetime  2022-08-18
