@@ -7,7 +7,7 @@ author      kk pp
 
 
 [Script]
-http-response ^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) requires-body=1,script-path=https://github.com/ddgksf2013/Cuttlefish/raw/master/Script/coolapk.js
+http-response ^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) requires-body=1,script-path=https://github.com/ddgksf2013/Cuttlefish/raw/master/Script/coolapk.js, tag=酷安去广告
 
 [Mitm]
 hostname = api.coolapk.com
