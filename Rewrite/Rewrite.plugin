@@ -5,13 +5,16 @@
 #百度搜索使用夸克ua
 #^https?:\/\/(?!d\.pcs).*(?<!map)m\.baidu\.com header-replace User-Agent Mozilla/5.0 (iPhone; CPU iPhone OS 13_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1.1 Mobile/15E148 Safari/16C50 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)
 
-#游戏时光
-^http:\/\/app02\.vgtime\.com:8080\/vgtime-app\/api\/v2\/init\/ad\.json$ reject-200
-(^http:\/\/www\.vgtime\.com\/app\/topic\/\d+\.jhtml\?.*?&close_ad=)false(&page=\d&sign=.*?&timestamp=\d+&font_size=\d$) header $1true$2
+#日淘任意门开屏广告
+^https?:\/\/app\.meruki\.cn\/\?n=Sig\.Front\.AppFront\.GetOpenAdDoorzo reject-dict
 
-#dmm
+#游戏时光开屏广告
+^http:\/\/app02\.vgtime\.com:8080\/vgtime-app\/api\/v2\/init\/ad\.json$ reject-dict
+#(^http:\/\/www\.vgtime\.com\/app\/topic\/\d+\.jhtml\?.*?&close_ad=)false(&page=\d&sign=.*?&timestamp=\d+&font_size=\d$) header $1true$2
+
+#dmm //解除写真和r18页面限制
 ^https?:\/\/book\.dmm\.com header-replace Accept-Language ja-JP;q=1
 ^https?:\/\/.*\.dmm\.co\.jp header-replace Accept-Language ja-JP;q=1
 
 [MITM]
-hostname = book.dmm.com,*.dmm.co.jp
+hostname = app.meruki.cn,book.dmm.com,*.dmm.co.jp
