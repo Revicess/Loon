@@ -52,7 +52,7 @@ if (typeof $argument == "undefined") {
 
 if (body) {
 	$argument.split("&").forEach((item) => {
-		let [match, replace] = item.split("=");
+		let [match, replace] = item.split(/=(?=[^=]+$)/);
 		let re = getRegexp(match);
 		body = body.replace(re, replace);
 	});
