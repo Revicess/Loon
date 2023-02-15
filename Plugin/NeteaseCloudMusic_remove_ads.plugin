@@ -14,36 +14,36 @@ DOMAIN,iadmusicmatvideo.music.126.net,REJECT
 # 通用
 #^http:\/\/iadmat\.nosdn\.127\.net\/.* reject
 #^http:\/\/iadmusicmat(video)?\.music\.126\.net\/.* reject
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/music\/songshare\/text\/recommend\/get\? reject-200
+^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/music\/songshare\/text\/recommend\/get\? reject-img
 
 # 开屏广告、首页顶部横幅广告
-^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/ad\/.* reject-200
+^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/ad\/.* reject-img
 
 # 搜索页、填充词、排行榜
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/api\/search\/rcmd\/keyword\/get\/v2\? reject-200
-^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/search\/chart\/(detail|list)$ reject-200
-^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/search\/default\/keyword\/list\? reject-200
-^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/search\/rcmd\/keyword\/get\/v2$ reject-200
-^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/search\/specialkeyword\/get\? reject-200
+^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/api\/search\/rcmd\/keyword\/get\/v2\? reject-img
+^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/search\/chart\/(detail|list)$ reject-img
+^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/search\/default\/keyword\/list\? reject-img
+^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/search\/rcmd\/keyword\/get\/v2$ reject-img
+^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/search\/specialkeyword\/get\? reject-img
 
 # 播放页、多余图标、各种小提示、高品质音乐试用弹窗
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/community\/friends\/fans-group\/artist\/group\/get\? url reject-200
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/link\/position\/show\/resource\? url reject-200
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/link\/position\/show\/strategy\? url reject-200
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/mlivestream\/entrance\/playpage\/v7\/get\? url reject-200
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/music\/songshare\/text\/recommend\/get\? url reject-200
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/user\/sub\/artist\/exist\? url reject-200
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/vipcenter\/tspopup\/get\? url reject-200
-^https?:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/resniche\/position\/play\/new\/get\? url reject-200
+^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/community\/friends\/fans-group\/artist\/group\/get\? url reject-img
+^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/link\/position\/show\/resource\? url reject-img
+^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/link\/position\/show\/strategy\? url reject-img
+^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/mlivestream\/entrance\/playpage\/v7\/get\? url reject-img
+^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/music\/songshare\/text\/recommend\/get\? url reject-img
+^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/user\/sub\/artist\/exist\? url reject-img
+^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/vipcenter\/tspopup\/get\? url reject-img
+^https?:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/resniche\/position\/play\/new\/get\? url reject-img
 
 # 评论页、回复广告、星评馆
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/comment\/hotcomment\/collect\/fetchmodelinfov2\? reject-200
-^https?:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/comment\/feed\/inserted\/resources\? reject-200
-^https?:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/v1\/content\/exposure\/comment\/banner\/get\? reject-200
+^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/comment\/hotcomment\/collect\/fetchmodelinfov2\? reject-img
+^https?:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/comment\/feed\/inserted\/resources\? reject-img
+^https?:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/v1\/content\/exposure\/comment\/banner\/get\? reject-img
 
 # 首页、右上角多余图标、会员续费弹窗
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/link\/scene\/show\/resource\? reject-200
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/vipauth\/app\/auth\/recycle\? reject-200
+^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/link\/scene\/show\/resource\? reject-img
+^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|1[0-9]{1,2}|[0-9]))\/eapi\/vipauth\/app\/auth\/recycle\? reject-img
 
 [MITM]
 hostname = interface*.music.163.com
