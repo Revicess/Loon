@@ -5,12 +5,6 @@
 #!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/NeteaseCloudMusic.png
 
-/*
-[Rule]
-DOMAIN,iadmat.nosdn.127.net,PROXY
-DOMAIN,iadmusicmat.music.126.net,PROXY
-DOMAIN,iadmusicmatvideo.music.126.net,PROXY
-*/
 [Rewrite]
 # 通用
 ^http:\/\/iadmat\.nosdn\.127\.net\/.* reject-img
