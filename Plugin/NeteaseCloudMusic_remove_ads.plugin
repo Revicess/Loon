@@ -6,9 +6,9 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/NeteaseCloudMusic.png
 
 [Rule]
-DOMAIN,iadmat.nosdn.127.net,PROXY
-DOMAIN,iadmusicmat.music.126.net,PROXY
-DOMAIN,iadmusicmatvideo.music.126.net,PROXY
+DOMAIN,iadmat.nosdn.127.net,REJECT-IMG
+DOMAIN,iadmusicmat.music.126.net,REJECT-IMG
+DOMAIN,iadmusicmatvideo.music.126.net,REJECT-IMG
 
 [Rewrite]
 # 通用
