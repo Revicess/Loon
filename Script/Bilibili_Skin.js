@@ -27,7 +27,7 @@ B站装扮diy
 [Script]
 获取装扮信息(获取完即可关闭此重写)
 
-http-response ^https:\/\/api\.bilibili\.com\/x\/garb\/v2\/mall\/suit\/detail script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bili-suit-detail.js, requires-body=1, tag=皮肤装扮, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/bilibili.png
+http-response ^https:\/\/api\.bilibili\.com\/x\/garb\/v2\/mall\/suit\/detail script-path=https://raw.githubusercontent.com/kokoryh/Script/master/js/bili-suit-detail.js, requires-body=1, tag=获取装扮信息, img-url=https://raw.githubusercontent.com/NobyDa/mini/master/Color/bilibili.png
 ----------------
 日常使用
 
