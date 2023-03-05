@@ -6,7 +6,7 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/NeteaseCloudMusic.png
 
 [Rule]
-DOMAIN, httpdns.n.netease.com, REJECT-DICT
+#DOMAIN, httpdns.n.netease.com, REJECT-DICT
 DOMAIN, iadmat.nosdn.127.net, REJECT-DROP
 DOMAIN, admusicpic.music.126.net, REJECT-IMG
 DOMAIN, iadmusicmat.music.126.net, REJECT-IMG
