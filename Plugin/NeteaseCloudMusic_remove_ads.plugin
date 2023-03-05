@@ -31,7 +31,7 @@ DOMAIN, iadmusicmatvideo.music.126.net, REJECT-IMG
 # 播客 | 快闪FM 弹出广告
 ^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/eapi\/voice\/play\/page\/ad\/ reject-dict
 
-# 侧边栏广告
+# 侧边栏小程序入口
 ^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/eapi\/side-bar reject-dict
 
 #防止去广告失效
