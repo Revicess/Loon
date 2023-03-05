@@ -5,6 +5,9 @@
 #!homepage = 
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/NeteaseCloudMusic.png
 
+[General]
+force-http-engine-hosts = 59.111.*:0
+
 [Rule]
 DOMAIN, httpdns.n.netease.com, REJECT
 DOMAIN, iadmat.nosdn.127.net, REJECT
@@ -26,4 +29,4 @@ DOMAIN, iadmusicmatvideo.music.126.net, REJECT
 ^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/w?e?api\/(search\/(chart|default|rcmd\/keyword|specialkeyword)|(resource-exposure\/|middle\/clientcfg\/config)|activity\/bonus\/playpage\/time\/query) reject-dict
 
 [MITM]
-hostname = interface*.music.163.com, interface3.music.163.com.163jiasu.com
+hostname = interface*.music.163.com, interface3.music.163.com.163jiasu.com, 59.111.*
