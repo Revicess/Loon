@@ -1,9 +1,9 @@
-#!name = 网易云音乐去广告TEST
-#!desc = 过滤网易云音乐广告TEST
-#!open= 
+#!name = 网易云音乐去广告
+#!desc = 去除网易云音乐广告，仅适用于Loon
+#!open = 
 #!author = Keywos RuCu6 kokoryh LimeAroma
 #!homepage = 
-#!icon = 
+#!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png
 
 [Rule]
 # DOMAIN, httpdns.n.netease.com, REJECT-DICT
