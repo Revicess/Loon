@@ -6,7 +6,7 @@
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png
 
 [Rule]
-# DOMAIN, httpdns.n.netease.com, REJECT-DICT
+# DOMAIN, httpdns.n.netease.com, REJECT-DROP
 DOMAIN, iadmat.nosdn.127.net, REJECT-DROP
 DOMAIN, admusicpic.music.126.net, REJECT-IMG
 DOMAIN, iadmusicmat.music.126.net, REJECT-IMG
@@ -30,6 +30,9 @@ DOMAIN, iadmusicmatvideo.music.126.net, REJECT-IMG
 
 # 播客 | 快闪FM 弹出广告
 ^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/eapi\/voice\/play\/page\/ad\/ reject-dict
+
+# 侧边栏广告
+^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/eapi\/side-bar reject-dict
 
 #防止去广告失效
 ^https:\/\/httpdns\.n\.netease\.com\/httpdns\/v2\/d\?domain= reject-dict
