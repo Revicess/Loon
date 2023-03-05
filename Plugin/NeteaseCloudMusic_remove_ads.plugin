@@ -9,8 +9,8 @@
 force-http-engine-hosts = 59.111.*:0
 
 [Rule]
-DOMAIN, httpdns.n.netease.com, REJECT-DROP
-DOMAIN, iadmat.nosdn.127.net, REJECT-DROP
+DOMAIN, httpdns.n.netease.com, REJECT
+DOMAIN, iadmat.nosdn.127.net, REJECT
 DOMAIN, admusicpic.music.126.net, REJECT-DROP
 DOMAIN, iadmusicmat.music.126.net, REJECT-DROP
 DOMAIN, iadmusicmatvideo.music.126.net, REJECT-DROP
@@ -29,4 +29,4 @@ DOMAIN, iadmusicmatvideo.music.126.net, REJECT-DROP
 ^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/w?e?api\/(search\/(chart|default|rcmd\/keyword|specialkeyword)|(resource-exposure\/|middle\/clientcfg\/config)|activity\/bonus\/playpage\/time\/query) reject-dict
 
 [MITM]
-hostname = interface*.music.163.com, interface3.music.163.com.163jiasu.com, 59.111.*
+hostname = interface*.music.163.com, interface3.music.163.com.163jiasu.com, 59.111.*, 112.13.*
