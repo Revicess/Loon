@@ -6,10 +6,10 @@
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/NeteaseCloudMusic.png
 
 [Rule]
-DOMAIN, iadmat.nosdn.127.net
-DOMAIN, admusicpic.music.126.net
-DOMAIN, iadmusicmat.music.126.net
-DOMAIN, iadmusicmatvideo.music.126.net
+DOMAIN, iadmat.nosdn.127.net, REJECT
+DOMAIN, admusicpic.music.126.net, REJECT
+DOMAIN, iadmusicmat.music.126.net, REJECT
+DOMAIN, iadmusicmatvideo.music.126.net, REJECT
 
 [Rewrite]
 #开屏广告｜开屏歌曲热评｜搜索页下方横幅广告
