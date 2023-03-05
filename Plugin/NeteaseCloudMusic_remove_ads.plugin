@@ -1,47 +1,34 @@
-#!name = 网易云音乐去广告
-#!desc = 过滤网易云音乐广告
-#!open= 
-#!author = Keywos RuCu6 kokoryh
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/QuantumultX/Rewrite
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/NeteaseCloudMusic.png
-
-[Rule]
-DOMAIN,iadmat.nosdn.127.net,REJECT-IMG
-DOMAIN,iadmusicmat.music.126.net,REJECT-IMG
-DOMAIN,iadmusicmatvideo.music.126.net,REJECT-IMG
+# ======= 网易云音乐 ======= #
+# 2023-02-27 15:50
+#来源：@RuCu6
 
 [Rewrite]
-# 通用
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/music\/songshare\/text\/recommend\/get\? reject-dict
+# 开屏广告,首页顶部横幅广告
+^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/eapi\/ad\/.* reject-dict
 
-# 开屏广告、首页顶部横幅广告
-^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/ad\/.* reject-dict
+# 搜索页,填充词,排行榜
+^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/eapi\/search\/(chart\/(detail|list)$|default\/keyword\/list\?|rcmd\/keyword\/get\/v2\??|specialkeyword\/get\?) reject-dict
 
-# 搜索页、填充词、排行榜
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/api\/search\/rcmd\/keyword\/get\/v2\? reject-dict
-^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/search\/chart\/(detail|list)$ reject-dict
-^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/search\/default\/keyword\/list\? reject-dict
-^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/search\/rcmd\/keyword\/get\/v2$ reject-dict
-^https?:\/\/(interface3?\.music\.163.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/search\/specialkeyword\/get\? reject-dict
+# 播放页,多余图标,各种小提示,高品质音乐试用弹窗
+^https?:\/\/(interface3\.music\.163\.com|[\d\.]+)\/eapi\/(link\/position\/show\/(resource|strategy)|music\/songshare\/text\/recommend\/get)\? reject-dict
+^https?:\/\/(interface3\.music\.163\.com|[\d\.]+)\/eapi\/(mlivestream\/entrance\/playpage\/v7|community\/friends\/fans-group\/artist\/group)\/get\? reject-dict
+^https?:\/\/(interface3\.music\.163\.com|[\d\.]+)\/eapi\/(user\/sub\/artist\/exist|vipcenter\/tspopup\/get)\? reject-dict
+^https?:\/\/(interface3\.music\.163\.com|[\d\.]+)\/eapi\/resniche\/position\/play\/new\/get\? reject-dict
 
-# 播放页、多余图标、各种小提示、高品质音乐试用弹窗
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/community\/friends\/fans-group\/artist\/group\/get\? reject-dict
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/link\/position\/show\/resource\? reject-dict
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/link\/position\/show\/strategy\? reject-dict
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/mlivestream\/entrance\/playpage\/v7\/get\? reject-dict
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/music\/songshare\/text\/recommend\/get\? reject-dict
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/user\/sub\/artist\/exist\? reject-dict
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/vipcenter\/tspopup\/get\? reject-dict
-^https?:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/resniche\/position\/play\/new\/get\? reject-dict
+# 评论页,回复广告,星评馆
+^https?:\/\/(interface3\.music\.163\.com|[\d\.]+)\/eapi\/comment\/(hotcomment\/collect\/fetchmodelinfov2|feed\/inserted\/resources)\? reject-dict
+^https?:\/\/(interface3\.music\.163\.com|[\d\.]+)\/eapi\/v1\/content\/exposure\/comment\/banner\/get\? reject-dict
 
-# 评论页、回复广告、星评馆
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/comment\/hotcomment\/collect\/fetchmodelinfov2\? reject-dict
-^https?:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/comment\/feed\/inserted\/resources\? reject-dict
-^https?:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/v1\/content\/exposure\/comment\/banner\/get\? reject-dict
+# 首页,右上角多余图标,会员续费弹窗
+^https?:\/\/(interface3\.music\.163\.com|[\d\.]+)\/eapi\/(homepage\/banner\/ad\/get|link\/scene\/show\/resource)\? reject-dict
+^https?:\/\/(interface3\.music\.163\.com|[\d\.]+)\/eapi\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle)\? reject-dict
 
-# 首页、右上角多余图标、会员续费弹窗
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/link\/scene\/show\/resource\? reject-dict
-^https:\/\/(interface3\.music\.163\.com|((25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9])\.){3}(25[0-5]|2[0-4][0-9]|[1-9][0-9]{1,2}|[0-9]))\/eapi\/vipauth\/app\/auth\/recycle\? reject-dict
+# 我的页面,小部件红点
+^https?:\/\/(interface3\.music\.163\.com|[\d\.]+)\/eapi\/mine\/applet\/redpoint\? reject-dict
+
+# 歌单页,横幅广告
+^https?:\/\/(interface\.music\.163\.com|[\d\.]+)\/weapi\/middle\/clientcfg\/config\/list\? reject-dict
+^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/w?eapi\/resource-exposure\/(activity\/config\/get|config)\? reject-dict
 
 [MITM]
 hostname = interface*.music.163.com
