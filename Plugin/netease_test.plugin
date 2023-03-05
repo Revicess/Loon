@@ -26,4 +26,4 @@ DOMAIN, iadmusicmatvideo.music.126.net, REJECT-IMG
 ^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/w?e?api\/(search\/(chart|default|rcmd\/keyword|specialkeyword)|(resource-exposure\/|middle\/clientcfg\/config)|activity\/bonus\/playpage\/time\/query) reject-dict
 
 [MITM]
-hostname = interface*.music.163.com, interface3.music.163.com.163jiasu.com, httpdns.n.netease.com, 115.236.121.195, 115.236.121.51
+hostname = interface*.music.163.com, interface3.music.163.com.163jiasu.com, 115.236.121.195, 115.236.121.51
