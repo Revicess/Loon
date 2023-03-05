@@ -1,12 +1,12 @@
 #!name = 网易云音乐去广告
 #!desc = 过滤网易云音乐广告
 #!open= 
-#!author = RuCu6
+#!author = Keywos RuCu6 kokoryh
 #!homepage = 
 #!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/80px/NeteaseCloudMusic.png
-# ======= 网易云音乐 ======= #
-# 2023-02-27 15:50
-#来源：@RuCu6
+
+[General]
+force-http-engine-hosts = 59.111.*:0
 
 [Rewrite]
 # 开屏广告,首页顶部横幅广告
@@ -37,4 +37,4 @@
 ^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/w?eapi\/resource-exposure\/(activity\/config\/get|config)\? reject-dict
 
 [MITM]
-hostname = interface*.music.163.com
+hostname = hostname = interface*.music.163.com, 112.13.*, 59.111.*
