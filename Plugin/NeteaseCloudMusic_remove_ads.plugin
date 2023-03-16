@@ -6,11 +6,13 @@
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png
 
 [Rule]
-DOMAIN, httpdns.n.netease.com, REJECT-DROP
-DOMAIN, iadmat.nosdn.127.net, REJECT-DROP
-DOMAIN, admusicpic.music.126.net, REJECT-IMG
-DOMAIN, iadmusicmat.music.126.net, REJECT-IMG
-DOMAIN, iadmusicmatvideo.music.126.net, REJECT-IMG
+#DOMAIN,httpdns.n.netease.com,REJECT-DROP
+DOMAIN,iadmat.nosdn.127.net,REJECT-DROP
+DOMAIN,admusicpic.music.126.net,REJECT-IMG
+DOMAIN,iadmusicmat.music.126.net,REJECT-IMG
+DOMAIN,iadmusicmatvideo.music.126.net,REJECT-IMG
+IP-CIDR,115.236.121.195/32,REJECT-DROP,no-resolve
+IP-CIDR,115.236.121.51/32,REJECT-DROP,no-resolve
 
 [Rewrite]
 #开屏广告｜开屏歌曲热评｜搜索页下方横幅广告
@@ -38,4 +40,4 @@ DOMAIN, iadmusicmatvideo.music.126.net, REJECT-IMG
 #^https:\/\/httpdns\.n\.netease\.com\/httpdns\/v2\/d\?domain= reject-dict
 
 [MITM]
-hostname = interface*.music.163.com, interface3.music.163.com.163jiasu.com, 115.236.121.195, 115.236.121.51
+hostname = interface*.music.163.com, interface3.music.163.com.163jiasu.com, 59.111.160.195, 59.111.160.197
