@@ -12,13 +12,16 @@ force-http-engine-hosts = app02.vgtime.com:8080
 # 日淘任意门开屏广告
 ^https?:\/\/app\.meruki\.cn\/\?n=Sig\.Front\.AppFront\.GetOpenAdDoorzo reject-dict
 
-# 游戏时光开屏广告 文章顶部广告
+# 游戏时光开屏广告(需要全新应用) 文章顶部广告
 ^http:\/\/app02\.vgtime\.com:8080\/vgtime-app\/api\/v2\/init\/ad\.json$ reject-dict
 ^(http:\/\/www\.vgtime\.com\/app\/topic\/\d+\.jhtml\?.*?&close_ad=)false(&page=\d&sign=\w+&timestamp=\d+&font_size=\d$) header $1true$2
+
+# 机核网开屏广告(需要全新应用)
+^https?:\/\/www\.gcores\.com\/gapi\/v1\/app-start-pages\?page reject-dict
 
 # dmm 解除写真和r18页面限制
 ^https?:\/\/book\.dmm\.com header-replace Accept-Language ja-JP;q=1
 ^https?:\/\/.*\.dmm\.co\.jp header-replace Accept-Language ja-JP;q=1
 
 [MITM]
-hostname = www.baidu.com,m.baidu.com,app.meruki.cn,book.dmm.com,*.dmm.co.jp
+hostname = www.baidu.com,m.baidu.com,app.meruki.cn,book.dmm.com,www.gcores.com,*.dmm.co.jp
