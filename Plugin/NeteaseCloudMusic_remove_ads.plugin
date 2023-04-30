@@ -13,7 +13,6 @@ DOMAIN,iadmat.nosdn.127.net,REJECT-DROP
 DOMAIN,admusicpic.music.126.net,REJECT-IMG
 DOMAIN,iadmusicmat.music.126.net,REJECT-IMG
 DOMAIN,iadmusicmatvideo.music.126.net,REJECT-IMG
-DOMAIN-SUFFIX,163jiasu.com,REJECT-DROP
 # httpdns
 DOMAIN,httpdns.n.netease.com,REJECT-DROP
 IP-CIDR,115.236.121.195/32,REJECT-DROP,no-resolve
