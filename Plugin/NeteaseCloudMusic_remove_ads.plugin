@@ -6,7 +6,7 @@
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png
 
 [Rule]
-#DOMAIN,httpdns.n.netease.com,REJECT-DROP
+DOMAIN,httpdns.n.netease.com,REJECT-DROP
 DOMAIN,iadmat.nosdn.127.net,REJECT-DROP
 DOMAIN,admusicpic.music.126.net,REJECT-IMG
 DOMAIN,iadmusicmat.music.126.net,REJECT-IMG
