@@ -5,12 +5,17 @@
 #!homepage = 
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png
 
+[General]
+skip-proxy = 240.0.0.0/4, 59.111.179.213/32, 59.111.179.214/32, 59.111.160.195/32, 59.111.160.197/32
+
 [Rule]
-DOMAIN,httpdns.n.netease.com,REJECT-DROP
 DOMAIN,iadmat.nosdn.127.net,REJECT-DROP
 DOMAIN,admusicpic.music.126.net,REJECT-IMG
 DOMAIN,iadmusicmat.music.126.net,REJECT-IMG
 DOMAIN,iadmusicmatvideo.music.126.net,REJECT-IMG
+DOMAIN-SUFFIX,163jiasu.com,REJECT-DROP
+# httpdns
+DOMAIN,httpdns.n.netease.com,REJECT-DROP
 IP-CIDR,115.236.121.195/32,REJECT-DROP,no-resolve
 IP-CIDR,115.236.121.51/32,REJECT-DROP,no-resolve
 IP-CIDR,59.111.239.61/32,REJECT-DROP,no-resolve
@@ -18,28 +23,28 @@ IP-CIDR,59.111.239.62/32,REJECT-DROP,no-resolve
 
 [Rewrite]
 #开屏广告｜开屏歌曲热评｜搜索页下方横幅广告
-^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/eapi\/ad reject-dict
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/ad reject-dict
 
 #播放页歌名下方∶乐迷团｜关注｜播放页提示｜音乐应用红点｜播放提示?
-^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/eapi\/(community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist|music\/songshare\/text\/recommend\/get|mine\/applet\/redpoint|resniche\/position\/play\/new\/get) reject-dict
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist|music\/songshare\/text\/recommend\/get|mine\/applet\/redpoint|resniche\/position\/play\/new\/get) reject-dict
 
 #评论区插入广告｜回复广告｜首页右上角免或vip图标｜播放页的各种小提示｜评论右上角热评馆｜播放页正在试听弹窗｜播放页右上角live或直播图标入口｜首次登录黑胶过期弹窗   new resource
-^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/eapi\/(comment\/feed\/inserted|v\d\/content\/exposure\/comment\/banner|link\/(position\/show\/(strategy|resource)|scene\/show)|comment\/hotcomment\/collect|vipcenter\/tspopup\/get|mlivestream\/entrance\/playpage|vipauth\/app\/auth|music-vip-membership\/client\/vip\/info) reject-dict
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(comment\/feed\/inserted|v\d\/content\/exposure\/comment\/banner|link\/(position\/show\/(strategy|resource)|scene\/show)|comment\/hotcomment\/collect|vipcenter\/tspopup\/get|mlivestream\/entrance\/playpage|vipauth\/app\/auth|music-vip-membership\/client\/vip\/info) reject-dict
 
 # 搜索页热搜卡片｜猜你喜欢｜我的应用下方提醒
-^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/w?e?api\/(search\/(chart|default|rcmd\/keyword|specialkeyword)|(resource-exposure\/|middle\/clientcfg\/config)|activity\/bonus\/playpage\/time\/query) reject-dict
+^https?:\/\/interface3?\.music\.163\.com\/w?e?api\/(search\/(chart|default|rcmd\/keyword|specialkeyword)|(resource-exposure\/|middle\/clientcfg\/config)|activity\/bonus\/playpage\/time\/query) reject-dict
 
 # 首页横幅广告
-^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/eapi\/homepage\/banner\/ad\/ reject-dict
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/homepage\/banner\/ad\/ reject-dict
 
 # 播客 | 快闪FM 弹出广告
-^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/eapi\/voice\/play\/page\/ad\/ reject-dict
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/voice\/play\/page\/ad\/ reject-dict
 
 # 侧边栏小程序入口
-^https?:\/\/(interface3?\.music\.163\.com|[\d\.]+)\/eapi\/side-bar reject-dict
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/side-bar reject-dict
 
 #防止去广告失效
 #^https:\/\/httpdns\.n\.netease\.com\/httpdns\/v2\/d\?domain= reject-dict
 
 [MITM]
-hostname = interface*.music.163.com, interface3.music.163.com.163jiasu.com, 59.111.179.213, 59.111.179.214, 59.111.160.195, 59.111.160.197
+hostname = interface.music.163.com, interface3.music.163.com
