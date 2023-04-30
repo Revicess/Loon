@@ -13,8 +13,6 @@ DOMAIN,iadmusicmat.music.126.net,REJECT-IMG
 DOMAIN,iadmusicmatvideo.music.126.net,REJECT-IMG
 IP-CIDR,115.236.121.195/32,REJECT-DROP,no-resolve
 IP-CIDR,115.236.121.51/32,REJECT-DROP,no-resolve
-IP-CIDR,59.111.160.195/32,REJECT-DROP,no-resolve
-IP-CIDR,59.111.160.197/32,REJECT-DROP,no-resolve
 IP-CIDR,59.111.239.61/32,REJECT-DROP,no-resolve
 IP-CIDR,59.111.239.62/32,REJECT-DROP,no-resolve
 
@@ -44,4 +42,4 @@ IP-CIDR,59.111.239.62/32,REJECT-DROP,no-resolve
 #^https:\/\/httpdns\.n\.netease\.com\/httpdns\/v2\/d\?domain= reject-dict
 
 [MITM]
-hostname = interface*.music.163.com, interface3.music.163.com.163jiasu.com, 59.111.179.213, 59.111.179.214
+hostname = interface*.music.163.com, interface3.music.163.com.163jiasu.com, 59.111.179.213, 59.111.179.214, 59.111.160.195, 59.111.160.197
