@@ -15,10 +15,10 @@ DOMAIN,iadmusicmat.music.126.net,REJECT-IMG
 DOMAIN,iadmusicmatvideo.music.126.net,REJECT-IMG
 # httpdns
 DOMAIN,httpdns.n.netease.com,REJECT-DROP
-IP-CIDR,115.236.121.195/32,REJECT-DROP,no-resolve
-IP-CIDR,115.236.121.51/32,REJECT-DROP,no-resolve
-IP-CIDR,59.111.239.61/32,REJECT-DROP,no-resolve
-IP-CIDR,59.111.239.62/32,REJECT-DROP,no-resolve
+IP-CIDR,115.236.121.195/32,REJECT,no-resolve
+IP-CIDR,115.236.121.51/32,REJECT,no-resolve
+#IP-CIDR,59.111.239.61/32,REJECT,no-resolve
+#IP-CIDR,59.111.239.62/32,REJECT,no-resolve
 
 [Rewrite]
 #开屏广告｜开屏歌曲热评｜搜索页下方横幅广告
