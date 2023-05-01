@@ -9,7 +9,7 @@
 skip-proxy = 240.0.0.0/4, 59.111.179.213/32, 59.111.179.214/32, 59.111.160.195/32, 59.111.160.197/32
 
 [Rule]
-DOMAIN,iadmat.nosdn.127.net,REJECT-DROP
+DOMAIN,iadmat.nosdn.127.net,REJECT
 DOMAIN,admusicpic.music.126.net,REJECT-IMG
 DOMAIN,iadmusicmat.music.126.net,REJECT-IMG
 DOMAIN,iadmusicmatvideo.music.126.net,REJECT-IMG
