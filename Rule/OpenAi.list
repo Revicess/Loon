@@ -1,0 +1,8 @@
+DOMAIN,openaicom.imgix.net
+DOMAIN,openaiapi-site.azureedge.net
+DOMAIN,chat.openai.com.cdn.cloudflare.net
+DOMAIN,production-openaicom-storage.azureedge.net
+DOMAIN-SUFFIX,ai.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-KEYWORD,openaicom-api-
+DOMAIN-KEYWORD,openaicomproduction
