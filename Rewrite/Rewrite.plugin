@@ -7,7 +7,7 @@ force-http-engine-hosts = app02.vgtime.com:8080
 
 [Rewrite]
 # 百度搜索使用夸克ua
-^https?:\/\/m\.baidu\.com/s\?from=\w+&word=(?!.*&p_tk=) header-replace User-Agent Mozilla/5.0 (iPhone; CPU iPhone OS 16_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Mobile/15E148 Safari/604.1 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)
+#^https?:\/\/m\.baidu\.com/s\?from=\w+&word= header-replace User-Agent Mozilla/5.0 (iPhone; CPU iPhone OS 16_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.4 Mobile/15E148 Safari/604.1 Quark/604.1 T7/10.3 SearchCraft/2.6.3 (Baidu; P1 8.0.0)
 
 # 日淘任意门开屏广告
 ^https?:\/\/app\.meruki\.cn\/\?n=Sig\.Front\.AppFront\.GetOpenAdDoorzo reject-dict
@@ -20,8 +20,8 @@ force-http-engine-hosts = app02.vgtime.com:8080
 ^https?:\/\/www\.gcores\.com\/gapi\/v1\/app-start-pages\?page reject-dict
 
 # dmm 解除写真和r18页面限制
-^https?:\/\/book\.dmm\.com header-replace Accept-Language ja-JP;q=1
-^https?:\/\/.*\.dmm\.co\.jp header-replace Accept-Language ja-JP;q=1
+#^https?:\/\/book\.dmm\.com header-replace Accept-Language ja-JP;q=1
+#^https?:\/\/.*\.dmm\.co\.jp header-replace Accept-Language ja-JP;q=1
 
 [MITM]
-hostname = www.baidu.com,m.baidu.com,app.meruki.cn,book.dmm.com,www.gcores.com,*.dmm.co.jp
+hostname = app.meruki.cn,www.gcores.com
