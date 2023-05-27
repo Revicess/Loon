@@ -5,15 +5,15 @@
 #!homepage = 
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png
 
-[General]
-skip-proxy = 240.0.0.0/4
+# [General]
+# skip-proxy = 240.0.0.0/4
 # skip-proxy = 240.0.0.0/4, 59.111.179.213/32, 59.111.179.214/32, 59.111.160.195/32, 59.111.160.197/32
 
 [Rule]
 DOMAIN,iadmat.nosdn.127.net,REJECT
 DOMAIN,admusicpic.music.126.net,REJECT-IMG
 DOMAIN,iadmusicmat.music.126.net,REJECT-IMG
-DOMAIN,iadmusicmatvideo.music.126.net,REJECT-IMG
+DOMAIN,iadmusicmatvideo.music.126.net,REJECT-VIDEO
 # httpdns
 #DOMAIN,httpdns.n.netease.com,REJECT-DROP
 #IP-CIDR,115.236.121.195/32,REJECT-DROP,no-resolve
