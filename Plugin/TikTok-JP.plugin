@@ -24,4 +24,4 @@ USER-AGENT,TikTok*,PROXY
 ^(https?:\/\/(tnc|dm)[\w-]+\.\w+\.com\/.+)(\?)(.+) $1$4 302
 
 [MITM]
-hostname = *.tiktokv.com
+hostname = *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
