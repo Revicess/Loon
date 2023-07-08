@@ -20,8 +20,8 @@ USER-AGENT,TikTok*,PROXY
 
 [Rewrite]
 ^https?:\/\/(tnc|dm)[\w-]+\.(tiktokv|byteoversea|tik-tokapi)\.com\/ reject-200
-(?<=^https?:\/\/[\w-]+\.(tiktokv|byteoversea|tik-tokapi)\.com\/.+_region=)CN(?=&) JP 307
-(?<=^https?:\/\/[\w-]+\.(tiktokv|byteoversea|tik-tokapi)\.com\/.+&mcc_mnc=)4 2 307
+(?<=https?:\/\/[\w-]+\.(tiktokv|byteoversea|tik-tokapi)\.com\/.+_region=)CN(?=&) JP 307
+(?<=https?:\/\/[\w-]+\.(tiktokv|byteoversea|tik-tokapi)\.com\/.+&mcc_mnc=)4 2 307
 
 [MITM]
 hostname = *.tiktokv.com,*.byteoversea.com,*.tik-tokapi.com
