@@ -1,0 +1,26 @@
+#!name = TikTok解锁
+#!desc = 自定义解锁地区
+#!openUrl = 
+#!author = Keywos
+#!homepage = https://github.com/Keywos
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/TikTok.png
+#!select = 解锁地区, 台湾, 日本, 韩国, 泰国, 越南, 英国, 法国, 德国, 美国, 巴西, 俄罗斯, 墨西哥, 土耳其, 西班牙, 阿根廷, 新加坡, 菲律宾, 马来西亚
+
+[Rule]
+DOMAIN-SUFFIX,byteoversea.com,PROXY
+DOMAIN-SUFFIX,ibytedtos.com,PROXY
+DOMAIN-SUFFIX,ipstatp.com,PROXY
+DOMAIN-SUFFIX,muscdn.com,PROXY
+DOMAIN-SUFFIX,musical.ly,PROXY
+DOMAIN-SUFFIX,tik-tokapi.com,PROXY
+DOMAIN-SUFFIX,tiktok.com,PROXY
+DOMAIN-SUFFIX,tiktokcdn.com,PROXY
+DOMAIN-SUFFIX,tiktokv.com,PROXY
+DOMAIN-KEYWORD,tiktokcdn,PROXY
+USER-AGENT,TikTok*,PROXY
+
+[Script]
+http-request ^https?:\/\/((tnc|dm)[\w-]+.+?\.com\/.+|.+\.(byteoversea|tiktokv).com\/.+(_region=CN&|&mcc_mnc=4)) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/TikTok/TikTok_redirect.js, tag = TikTok解锁
+
+[MITM]
+hostname = *.byteoversea.com, *.tik-tokapi.com, *.tiktokv.com
