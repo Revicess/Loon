@@ -7,6 +7,8 @@
 #!icon = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netease_Music.png
 
 [Rule]
+DOMAIN,ipv4.music.163.com,REJECT
+DOMAIN,ipv6.music.163.com,REJECT
 DOMAIN-KEYWORD,iadmat.nosdn.127.net,REJECT
 DOMAIN-KEYWORD,admusicpic.music.126.net,REJECT-IMG
 DOMAIN-KEYWORD,iadmusicmat.music.126.net,REJECT-IMG
